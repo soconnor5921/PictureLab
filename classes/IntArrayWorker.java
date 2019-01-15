@@ -103,10 +103,27 @@ public class IntArrayWorker
 
   public int getCount(int val)
   {
-    Pixels[][] pixels = Picture.getPixels2D();
-    for (int i = 0; i < ; i++)
+    int count = 0;
+    for (int i = 0; i < matrix.length; i++)
     {
-
+      for(int j = 0; j < matrix[i].length; j++)
+      {
+        if (matrix[i][j] == val) count++;
+      }
     }
+    return count;
+  }
+
+  public int getLargest()
+  {
+    int largest = 0;
+    for (int i = 0; i < matrix.length; i++)
+    {
+      for(int j = 0; j < matrix[i].length; j++)
+      {
+        if (matrix[i][j] >= largest) largest = matrix[i][j];
+      }
+    }
+    return largest;
   }
 }
