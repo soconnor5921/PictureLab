@@ -1,3 +1,5 @@
+import com.sun.glass.ui.Pixels;
+
 public class IntArrayWorker
 {
   /** two dimensional matrix */
@@ -98,5 +100,13 @@ public class IntArrayWorker
       }
     }
   }
- 
+
+  public int getCount(int val)
+  {
+    Pixels[][] pixels = Picture.getPixels2D();
+    for (int i = 0; i < ; i++)
+    {
+
+    }
+  }
 }
