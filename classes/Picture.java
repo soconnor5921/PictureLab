@@ -97,6 +97,21 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+  public void fixUnderwater()
+  {
+    Pixel[][] pixels = this.getPixels2D();
+    for(Pixel[] rowArray : pixels)
+    {
+      for(Pixel pixelObj : rowArray)
+      {
+        if(pixelObj.getBlue() < pixelObj.getGreen())
+        {
+            pixelObj.setGreen(0);
+        }
+      }
+    }
+  }
   
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
