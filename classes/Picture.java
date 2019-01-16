@@ -207,6 +207,25 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+  public void mirrorArms()
+  {
+    int mirrorPoint = 190;
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    for (int row = 160; row < mirrorPoint; row++)
+    {
+      for (int col = 100; col < 300; col++)
+      {
+
+        leftPixel = pixels[row][col];
+        rightPixel = pixels[mirrorPoint - row][col];
+        rightPixel.setColor(leftPixel.getColor());
+      }
+    }
+  }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the

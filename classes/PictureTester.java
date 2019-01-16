@@ -42,6 +42,14 @@ public class PictureTester
     arch.explore();
   }
 
+  public static void testMirrorArms()
+  {
+    Picture snowman = new Picture("snowman.jpg");
+    snowman.explore();
+    snowman.mirrorArms();
+    snowman.explore();
+  }
+
   public static void testMirrorHorizontalBotToTop()
   {
     Picture arch = new Picture("arch.jpg");
@@ -99,9 +107,9 @@ public class PictureTester
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
     //testMirrorHorizontal();
-    testMirrorHorizontalBotToTop();
-    //testMirrorTemple();
-    //testMirrorArms();
+    //testMirrorHorizontalBotToTop();
+    testMirrorTemple();
+    testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
