@@ -42,6 +42,14 @@ public class PictureTester
     arch.explore();
   }
 
+  public static void testMirrorHorizontalBotToTop()
+  {
+    Picture arch = new Picture("arch.jpg");
+    arch.explore();
+    arch.mirrorHorizontalBotToTop();
+    arch.explore();
+  }
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -90,7 +98,8 @@ public class PictureTester
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorVerticalRightToLeft();
-    testMirrorHorizontal();
+    //testMirrorHorizontal();
+    testMirrorHorizontalBotToTop();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
