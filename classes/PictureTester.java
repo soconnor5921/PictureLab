@@ -20,7 +20,7 @@ public class PictureTester
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("arch.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
