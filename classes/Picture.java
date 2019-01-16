@@ -201,8 +201,7 @@ public class Picture extends SimplePicture
       {
         
         leftPixel = pixels[row][col];      
-        rightPixel = pixels[row]                       
-                         [mirrorPoint - col + mirrorPoint];
+        rightPixel = pixels[row][mirrorPoint - col + mirrorPoint];
         rightPixel.setColor(leftPixel.getColor());
       }
     }
@@ -226,6 +225,28 @@ public class Picture extends SimplePicture
       }
     }
   }
+
+    public void mirrorGull()
+    {
+        int mirrorPoint = 350;
+        Pixel leftPixel = null;
+        Pixel rightPixel = null;
+        int count = 0;
+        Pixel[][] pixels = this.getPixels2D();
+
+        // loop through the rows
+        for (int row = 220; row < 320; row++)
+        {
+            // loop from 13 to just before the mirror point
+            for (int col = 230; col < mirrorPoint; col++)
+            {
+
+                leftPixel = pixels[row - 22][col];          //the second gull is swimming in the water! 🌊🌊🌊🌊 :)
+                rightPixel = pixels[row - 50][mirrorPoint - col + mirrorPoint];
+                rightPixel.setColor(leftPixel.getColor());
+            }
+        }
+    }
   
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the

@@ -50,6 +50,14 @@ public class PictureTester
     snowman.explore();
   }
 
+  public static void testMirrorGull()
+  {
+    Picture seagull = new Picture("seagull.jpg");
+    seagull.explore();
+    seagull.mirrorGull();
+    seagull.explore();
+  }
+
   public static void testMirrorHorizontalBotToTop()
   {
     Picture arch = new Picture("arch.jpg");
@@ -108,9 +116,9 @@ public class PictureTester
     //testMirrorVerticalRightToLeft();
     //testMirrorHorizontal();
     //testMirrorHorizontalBotToTop();
-    //testMirrorTemple();
-    testMirrorArms();
-    //testMirrorGull();
+    testMirrorTemple();
+    //testMirrorArms();
+    testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
     //testCopy();
